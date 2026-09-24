@@ -17,7 +17,7 @@ jobs:
       - name: Show operating system
         run: uname -a
       - name: Show myself 
-        run: echo "I Am Ayush"
+        run: echo "I Am AUXID"
   hello-ayush:
     runs-on: ubuntu-latest
     steps:
@@ -39,5 +39,5 @@ jobs:
       - name: Show operating system
         run: uname -a
       - name: Show myself 
-        run: echo "I Am Ayush"
+        run: echo "I Am learning CI-CD"
 
