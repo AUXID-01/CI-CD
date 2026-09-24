@@ -18,7 +18,7 @@ jobs:
         run: uname -a
       - name: Show myself 
         run: echo "I Am Ayush"
-   hello-ayush:
+  hello-ayush:
     runs-on: ubuntu-latest
     steps:
       - name: Print message
@@ -29,7 +29,7 @@ jobs:
         run: uname -a
       - name: Show myself 
         run: echo "I Am Ayush"
-   ci-cd:
+  ci-cd:
     runs-on: ubuntu-latest
     steps:
       - name: Print message
