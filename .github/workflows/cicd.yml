@@ -16,7 +16,7 @@ jobs:
         run: date
       - name: Show operating system
         run: uname -a
-      - name: Show myself 
+      - name: Show myself
         run: echo "I Am AUXID"
   hello-ayush:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
         run: date
       - name: Show operating system
         run: uname -a
-      - name: Show myself 
+      - name: Show myself
         run: echo "I Am Ayush"
   ci-cd:
     runs-on: ubuntu-latest
@@ -38,6 +38,19 @@ jobs:
         run: date
       - name: Show operating system
         run: uname -a
-      - name: Show myself 
+      - name: Show myself
         run: echo "I Am learning CI-CD"
 
+  secrets-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check secret
+        env:
+          DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
+        run: |
+          if [ -n "$DEMO_SECRET" ]; then
+            echo "Secret is available."
+          else
+            echo "Secret is not configured."
+            exit 1
+          fi
